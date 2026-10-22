@@ -115,7 +115,7 @@ bool dequeue(Queue& q, int& nomor) {
 // =============================================================================
 void clear(Queue& q) {
      // TODO: kerjakan di sini
-     while(!isEmpty) {
+     while(!isEmpty(q)) {
           int nilai;
           dequeue(q, nilai);
      }
