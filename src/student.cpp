@@ -78,11 +78,11 @@ bool enqueue(Queue& q, int nomor) {
      newnode->next = nullptr;
 
      if(isEmpty(q)) {
-               q.depan = newnode;
-               q.belakang = newnode;
+          q.depan = newnode;
+          q.belakang = newnode;
      } else {
-               q.belakang->next = newnode;
-               q.belakang = newnode;
+          q.belakang->next = newnode;
+          q.belakang = newnode;
      }
 
      return true;
@@ -98,10 +98,11 @@ bool dequeue(Queue& q, int& nomor) {
      }
 
      Node* hapus = q.depan;
+     nomor = hapus->data;
      q.depan = q.depan->next;
 
      if(q.depan == nullptr) {
-          q.belakang == nullptr;
+          q.belakang = nullptr;
      }
 
      delete hapus;
